@@ -33,27 +33,6 @@ client.on('message', async msg => {
             const attachmentData = await msg.downloadMedia();
             client.sendMessage(msg.from, attachmentData, {sendVideoAsGif: true});
         }
- 
-        if (cmd == "gambar"){
-            const media = MessageMedia.fromFilePath('./anime/anime-cry.gif');
-            client.sendMessage(msg.from, media);
-        }
- 
-        if (cmd == "video"){
-            const media = MessageMedia.fromFilePath('./anime/anime-cry.mp4');
-            client.sendMessage(msg.from, media, {sendVideoAsGif: true});
-        }
- 
-        if (cmd == "link"){
-            const media = await MessageMedia.fromUrl('https://via.placeholder.com/350x150.png');
-            client.sendMessage(msg.from, media, {sendMediaAsSticker: true});
-        }
- 
-        if (cmd == "link2"){
-            const media = await MessageMedia.fromUrl(args);
-            client.sendMessage(msg.from, media, {sendMediaAsSticker: true});
-        }
- 
     }
         
 });
